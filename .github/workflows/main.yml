@@ -53,6 +53,7 @@ jobs:
           username: ubuntu
           key: ${{secrets.EC2_PEMKEY}}
           envs: GITHUB_SHA
+
           script: |
             sudo docker stop spring-container
             sudo docker rm spring-container
