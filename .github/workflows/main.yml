@@ -41,7 +41,7 @@ jobs:
            
       - name: Docker build & push to docker repo
         run: |
-           docker build -f Dockerfil -t ${{secrets.DOCKER_REPO}} .
+           docker build -f Dockerfile -t ${{secrets.DOCKER_REPO}} .
            docker tag ${{secrets.DOCKER_REPO}}:latest ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_REPO}}:latest
            docker push ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_REPO}}
 
