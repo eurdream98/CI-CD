@@ -53,7 +53,7 @@ jobs:
           username: ubuntu
           key: ${{secrets.EC2_PEMKEY}}
           envs: GITHUB_SHA
-          scripts: |
+          script: |
             sudo docker stop spring-container
             sudo docker rm spring-container
             sudo docker pull ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_REPO}}:latest
