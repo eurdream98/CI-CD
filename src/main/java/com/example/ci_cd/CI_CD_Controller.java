@@ -25,6 +25,5 @@ public class CI_CD_Controller {
             </body>
             </html>
             """;
-
     }
 }
